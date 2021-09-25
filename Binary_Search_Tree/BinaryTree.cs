@@ -7,6 +7,7 @@ namespace Binary_Search_Tree
     class BinaryTree<T>where T : IComparable<T>
     {
         public T Data { get; set; }
+        
         public BinaryTree<T> LTree { get; set; }
         public BinaryTree<T> RTree { get; set; }
         public BinaryTree(T data)
@@ -49,6 +50,8 @@ namespace Binary_Search_Tree
                 this.RTree.Display();
             }
         }
+
+       
     }
 }
 
