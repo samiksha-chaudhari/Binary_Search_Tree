@@ -7,7 +7,7 @@ namespace Binary_Search_Tree
     class BinaryTree<T>where T : IComparable<T>
     {
         public T Data { get; set; }
-        
+        public bool result;
         public BinaryTree<T> LTree { get; set; }
         public BinaryTree<T> RTree { get; set; }
         public BinaryTree(T data)
@@ -50,8 +50,25 @@ namespace Binary_Search_Tree
                 this.RTree.Display();
             }
         }
+        public bool Search(T element, BinaryTree<T> node)
+        {
 
-       
+            if (node == null)
+                return false;
+            if (node.Data.Equals(element))
+            {
+                Console.WriteLine("Number is found :" + " " + node.Data);
+                result = true;
+            }
+            else
+                Console.WriteLine("Current {0} in BST", node.Data);
+            if (element.CompareTo(node.Data) < 0)
+                Search(element, node.LTree);
+            if (element.CompareTo(node.Data) > 0)
+                Search(element, node.RTree);
+            return result;
+        }
+
     }
 }
 

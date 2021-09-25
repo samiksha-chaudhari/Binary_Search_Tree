@@ -21,6 +21,10 @@ namespace Binary_Search_Tree
             binarySearch.Add(63);
             binarySearch.Add(67);
             binarySearch.Display();
-        }       
+            Console.WriteLine("Searching 63 in binary tree \n");
+            bool result = binarySearch.Search(63, binarySearch);
+            Console.WriteLine(result);
+        
+        }      
     }
 }
