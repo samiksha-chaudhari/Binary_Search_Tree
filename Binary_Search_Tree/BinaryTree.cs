@@ -10,31 +10,40 @@ namespace Binary_Search_Tree
         public bool result;
         public BinaryTree<T> LTree { get; set; }
         public BinaryTree<T> RTree { get; set; }
-        public BinaryTree(T data)
+        public BinaryTree(T data) //constuctor
         {
             this.Data = data;
             this.RTree = null;
             this.LTree = null;
         }
-        public void Add(T item)
+
+        /// <summary>
+        /// method to add data in BTS
+        /// </summary>
+        /// <param name="data"></param>
+        public void Add(T data)
         {
             T currentNodeValue = this.Data;
-            if ((currentNodeValue.CompareTo(item)) > 0)
+            if ((currentNodeValue.CompareTo(data)) > 0)
             {
                 if (this.LTree == null)
-                    this.LTree = new BinaryTree<T>(item);
+                    this.LTree = new BinaryTree<T>(data);
                 else
-                    this.LTree.Add(item);
+                    this.LTree.Add(data);
             }
             else
             {
                 if (this.RTree == null)
-                    this.RTree = new BinaryTree<T>(item);
+                    this.RTree = new BinaryTree<T>(data);
                 else
-                    this.RTree.Add(item);
+                    this.RTree.Add(data);
             }
         }
         private int LCount = 0, RCount = 0;
+
+        /// <summary>
+        /// method to display data
+        /// </summary>
         public void Display()
         {
             if (this.LTree != null)
@@ -50,6 +59,13 @@ namespace Binary_Search_Tree
                 this.RTree.Display();
             }
         }
+
+        /// <summary>
+        /// method to check data is present or not in BTS
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="node"></param>
+        /// <returns></returns>
         public bool Search(T element, BinaryTree<T> node)
         {
 
