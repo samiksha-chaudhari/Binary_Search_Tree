@@ -38,6 +38,7 @@ namespace Binary_Search_Tree
                 else
                     this.RTree.Add(data);
             }
+           // Console.WriteLine("data added is:" +data);
         }
         private int LCount = 0, RCount = 0;
 
