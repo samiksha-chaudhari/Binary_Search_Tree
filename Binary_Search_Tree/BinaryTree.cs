@@ -78,7 +78,7 @@ namespace Binary_Search_Tree
                 result = true;
             }
             else
-                Console.WriteLine("Current {0} in BST", node.Data);
+                Console.WriteLine("Current {0} in binay tree", node.Data);
             if (element.CompareTo(node.Data) < 0)
                 Search(element, node.LTree);
             if (element.CompareTo(node.Data) > 0)
