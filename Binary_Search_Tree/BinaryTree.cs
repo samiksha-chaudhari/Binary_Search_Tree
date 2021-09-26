@@ -18,9 +18,9 @@ namespace Binary_Search_Tree
         }
 
         /// <summary>
-        /// method to add data in BTS
+        /// method to add data in binary search tree
         /// </summary>
-        /// <param name="data"></param>
+        /// <param name="data"> takig data to add </param>
         public void Add(T data)
         {
             T currentNodeValue = this.Data;
@@ -62,9 +62,9 @@ namespace Binary_Search_Tree
         }
 
         /// <summary>
-        /// method to check data is present or not in BTS
+        /// method to check data is present or not in binary search tree
         /// </summary>
-        /// <param name="element"></param>
+        /// <param name="element">element to search in list</param>
         /// <param name="node"></param>
         /// <returns></returns>
         public bool Search(T element, BinaryTree<T> node)
